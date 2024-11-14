@@ -3,7 +3,8 @@ import jwt from 'jsonwebtoken'
 
 export default defineEventHandler(async (event) => {
   try {
-    const secretKey = process.env.JWT_SECRET_KEY
+    // const secretKey = process.env.JWT_SECRET_KEY
+    const secretKey = 'ljjk'
     if (!secretKey)
       return event.respondWith(new Response('jwt secretKey is required', { status: 500 }))
 
